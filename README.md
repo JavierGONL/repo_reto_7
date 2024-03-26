@@ -1,3 +1,8 @@
+<div align='center'>
+<figure> <img src="https://i.postimg.cc/HkMddSNw/error-418.png" alt="" width="300" height="auto"/></br>
+<figcaption><b></b></figcaption></figure>
+</div>
+
 # repo_reto_7
 
 1. Imprimir un listado con los números del 1 al 100 cada uno con su respectivo cuadrado.
