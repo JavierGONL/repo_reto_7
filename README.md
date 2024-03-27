@@ -122,7 +122,7 @@ ________________________________
 ```python
 def es_primo (n):
   c=2
-  d=0
+  d=1
   while c<=n and d<=2:
     o = n % c
     if  o == 0:
