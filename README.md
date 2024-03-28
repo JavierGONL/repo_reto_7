@@ -120,24 +120,24 @@ if __name__ == "__main__":
 8. Implementar el algoritmo que muestre los números primos del 1 al 100. **Nota:** use funciones
 ________________________________
 ```python
-def es_primo (n):
-  c=2
-  d=1
-  while c<=n and d<=2:
-    o = n % c
-    if  o == 0:
-      d=d+1
-    c=c+1
-  if d == 3:
+def es_primo (numero):
+  conteo=2
+  divisores=1
+  while conteo<=numero and divisores <=2:
+    comprobacionSiEsDivisor = numero % conteo
+    if comprobacionSiEsDivisor == 0:
+      divisores=divisores+1
+    conteo=conteo+1
+  if divisores == 3:
     return False
   else: 
     return True
   
 if __name__ == "__main__":
-    n=0
-while n<=100:
-    if es_primo(n):
-        print(n)
-    n=n+1
+    numero=0
+while numero<=100:
+  if es_primo(numero):
+    print(numero)
+  numero=numero+1
 print("Fin del ejercicio 8 reto 7 ")
 ```
