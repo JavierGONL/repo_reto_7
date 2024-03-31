@@ -20,6 +20,15 @@ if __name__ == "__main__":
         lista += 1
     print("Fin del while loop")
 ```
+```mermaid
+flowchart TD
+    A(inicio) --> B[N = 1]
+    B --> C{mientras N <= 100}
+    C --> D[se impreme N**2]    
+    D --> E[N+1] 
+    E --> C
+    C --> |N>100|:[fin del programa]
+```
 2.  Imprimir un listado con los números impares desde 1 hasta 999 y seguidamente otro listado con los números pares desde 2 hasta 1000.
 ________________________________
 ```python
@@ -39,6 +48,19 @@ if __name__ == "__main__":
         impares += 2
     print("Fin del while loop impares")
 ```
+```mermaid
+flowchart TD
+    A(inicio) --> B[numeros pares = 2]
+    B --> C{mientras numeros pares < 1000}
+    C --> D[se impreme numeros pares]    
+    D --> E[numeros pares +2] 
+    E --> C
+    C -->|numeros pares >= 1000|F[numeros impares = 1]
+    F --> G{mientras numeros impares < 1000}
+    G --> H[se imprime numeros impares]
+    H --> j[numeros impares+2] --> G
+    G --> |numeros impares >= 1000 |K[fin del programa] --> h[C:]
+```
 3.  Imprimir los números pares en forma descendente hasta 2 que son menores o iguales a un número natural n ≥ 2 dado
 ________________________________
 ```python
@@ -52,10 +74,18 @@ if __name__ == "__main__":
             numeroN -= 2
     else:
         numeroN -= 1
-        while numeroN >= 2 and numeroN % 2 != 0:
+        while numeroN >= 2 and numeroN % 2 == 0:
             print(numeroN)
             numeroN -= 2
 
+```
+
+```mermaid
+flowchart TD
+    A(inicio) --> B[se ingresa un numero N]
+    B --> C{es par?} -->|es par| D{mientrasN%2 == 0} 
+    D --> E[N-2] --> D --> | N==2|K[fin del programa]
+    C --> |no es par|F[N-1] --> G{mientras N%2 ==0} --> H[se imprime N] --> j[N-2] --> G --> | N==2|K[fin del programa]
 ```
 4. En 2022 el país A tendrá una población de 25 millones de habitantes y el país B de 18.9 millones. Las tasas de crecimiento anual de la población serán de 2% y 3% respectivamente. Desarrollar un algoritmo para informar en que año la población del país B superará a
 la de A.
