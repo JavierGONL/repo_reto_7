@@ -84,8 +84,8 @@ if __name__ == "__main__":
 flowchart TD
     A(inicio) --> B[se ingresa un numero N]
     B --> C{es par?} -->|es par| D{mientrasN%2 == 0} 
-    D --> E[N-2] --> D --> | N==2|K[fin del programa]
-    C --> |no es par|F[N-1] --> G{mientras N%2 ==0} --> H[se imprime N] --> j[N-2] --> G --> | N==2|K[fin del programa]
+    D --> E[N-2] --> D --> | N<2|K[fin del programa]
+    C --> |no es par|F[N-1] --> G{mientras N%2 ==0} --> H[se imprime N] --> j[N-2] --> G --> | N<2|K[fin del programa]
 ```
 4. En 2022 el país A tendrá una población de 25 millones de habitantes y el país B de 18.9 millones. Las tasas de crecimiento anual de la población serán de 2% y 3% respectivamente. Desarrollar un algoritmo para informar en que año la población del país B superará a
 la de A.
